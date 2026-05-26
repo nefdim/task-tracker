@@ -40,10 +40,9 @@ The application is split into two services:
 - Handles networking between frontend and backend
 
 ---
+## 🖥️ Run Locally (Without Docker)
 
-🖥️ Run Locally (Without Docker)
-
-Backend
+### Backend
 
 ```bash
 cd backend
@@ -74,7 +73,7 @@ Start the application
 From the project root:
 
 docker compose up --build
-Access the app
+🌐 Access the App
 
 Frontend:
 http://localhost:5173
@@ -85,5 +84,5 @@ http://localhost:8000
 API Docs:
 http://localhost:8000/docs
 
-Stop the application
+⛔ Stop the application
 docker compose down
