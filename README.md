@@ -41,7 +41,7 @@ The application is split into two services:
 
 ---
 
-# 🖥️ Run Locally (Without Docker)
+🖥️ Run Locally (Without Docker)
 
 Backend
 
@@ -66,9 +66,7 @@ npm run dev
 Frontend runs at:
 http://localhost:5173
 
----
-
-# 🐳 Run with Docker
+🐳 Run with Docker
 Prerequisites
 Docker Desktop installed
 Start the application
