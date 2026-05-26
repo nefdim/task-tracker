@@ -66,6 +66,8 @@ npm run dev
 Frontend runs at:
 http://localhost:5173
 
+---
+
 # 🐳 Run with Docker
 ## Prerequisites
 Docker Desktop installed
