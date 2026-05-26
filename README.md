@@ -43,7 +43,7 @@ The application is split into two services:
 
 # 🖥️ Run Locally (Without Docker)
 
-## Backend
+Backend
 
 ```bash
 cd backend
@@ -69,7 +69,7 @@ http://localhost:5173
 ---
 
 # 🐳 Run with Docker
-## Prerequisites
+Prerequisites
 Docker Desktop installed
 Start the application
 
