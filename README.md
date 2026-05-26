@@ -1,61 +1,89 @@
 # Task Tracker App
 
-An internal task tracking web application built with React and FastAPI.
+A full-stack task tracking application built with:
 
-## Tech Stack
+- Frontend: React (Vite)
+- Backend: FastAPI (Python)
+- Database: SQLite
+- Containerization: Docker + Docker Compose
 
-- **Frontend:** React + Vite
-- **Backend:** FastAPI (Python)
-- **Database:** SQLite
+---
 
-## Features
+# 🚀 Features
 
-- Create tasks with title, description and status
-- View all tasks organized by status (Open, In Progress, Completed)
-- View task details
+- Create tasks (title, description)
+- View tasks by status (Open, In Progress, Completed)
 - Update task status
 - Delete tasks
+- REST API backend
+- Simple and clean UI
 
-## How to Run Locally
+---
 
-### Backend
+# 🧠 Architecture
 
-1. Navigate to the backend folder:
+The application is split into two services:
+
+### Backend (FastAPI)
+- Handles REST API
+- Uses SQLAlchemy ORM
+- Stores data in SQLite (`tasks.db`)
+- Runs on port `8000`
+
+### Frontend (React + Vite)
+- Provides user interface
+- Communicates with backend via HTTP
+- Runs on port `5173`
+
+### Docker Compose
+- Runs both services together
+- Handles networking between frontend and backend
+
+---
+
+# 🖥️ Run Locally (Without Docker)
+
+## Backend
+
+```bash
 cd backend
-
-2. Create and activate a virtual environment:
 python -m venv .venv
 .venv\Scripts\activate
-
-3. Install dependencies:
 pip install fastapi uvicorn sqlalchemy
-
-4. Start the backend server:
 uvicorn main:app --reload
 
-Backend runs at: http://127.0.0.1:8000  
-API docs available at: http://127.0.0.1:8000/docs
+Backend runs at:
+http://127.0.0.1:8000
 
-### Frontend
+API docs:
+http://127.0.0.1:8000/docs
 
-1. Navigate to the frontend folder:
+Frontend
 cd frontend
-
-2. Install dependencies:
 npm install
-
-3. Start the development server:
 npm run dev
 
-Frontend runs at: http://localhost:5173
+Frontend runs at:
+http://localhost:5173
 
-## How to Run with Docker
+🐳 Run with Docker
+Prerequisites
+Docker Desktop installed
+Start the application
 
-Coming soon — Docker setup will be added shortly.
+From the project root:
 
-## Design Choices
+docker compose up --build
+Access the app
 
-- SQLite was chosen over in-memory storage for data persistence across server restarts
-- Tasks are organized into three columns (Open, In Progress, Completed) for a clear visual overview
-- REST API follows standard conventions with GET, POST, PUT and DELETE endpoints
-- CORS is enabled to allow communication between frontend and backend during local development
+Frontend:
+http://localhost:5173
+
+Backend:
+http://localhost:8000
+
+API Docs:
+http://localhost:8000/docs
+
+Stop the application
+docker compose down
